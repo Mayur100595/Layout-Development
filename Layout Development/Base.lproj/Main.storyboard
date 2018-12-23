@@ -47,6 +47,10 @@
                                         </view>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="nX6-vO-KoO" id="U6F-o8-Vcb"/>
+                                    <outlet property="delegate" destination="nX6-vO-KoO" id="7Z5-Qy-Xdh"/>
+                                </connections>
                             </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Iv-ck-cAs">
                                 <rect key="frame" x="96" y="20" width="279" height="100"/>
@@ -120,6 +124,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="VCu-KO-zkB"/>
                     <connections>
+                        <outlet property="clv_Function" destination="Pcr-Bj-7zG" id="oRl-oJ-mUT"/>
                         <outlet property="const_StatusBarHeight" destination="NU9-5Y-6y8" id="dbt-Eu-KJ6"/>
                         <outlet property="view_statusBar" destination="x5s-nF-UfC" id="X2U-ja-mz5"/>
                     </connections>
