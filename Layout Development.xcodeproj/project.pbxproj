@@ -15,6 +15,8 @@
 		94110E5A21D010C500ADCC62 /* FASHIONCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94110E5821D010C500ADCC62 /* FASHIONCollectionViewCell.xib */; };
 		94110E5B21D010C500ADCC62 /* FASHIONCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94110E5921D010C500ADCC62 /* FASHIONCollectionViewCell.swift */; };
 		94110E5E21D010D500ADCC62 /* TableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94110E5D21D010D500ADCC62 /* TableViewModel.swift */; };
+		94110E6121D0150D00ADCC62 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94110E5F21D0150D00ADCC62 /* ProductTableViewCell.swift */; };
+		94110E6221D0150D00ADCC62 /* ProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94110E6021D0150D00ADCC62 /* ProductTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		94110E5821D010C500ADCC62 /* FASHIONCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FASHIONCollectionViewCell.xib; sourceTree = "<group>"; };
 		94110E5921D010C500ADCC62 /* FASHIONCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FASHIONCollectionViewCell.swift; sourceTree = "<group>"; };
 		94110E5D21D010D500ADCC62 /* TableViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewModel.swift; sourceTree = "<group>"; };
+		94110E5F21D0150D00ADCC62 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
+		94110E6021D0150D00ADCC62 /* ProductTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +69,8 @@
 				94110E4821D00DB100ADCC62 /* ViewController.swift */,
 				94110E5921D010C500ADCC62 /* FASHIONCollectionViewCell.swift */,
 				94110E5821D010C500ADCC62 /* FASHIONCollectionViewCell.xib */,
+				94110E5F21D0150D00ADCC62 /* ProductTableViewCell.swift */,
+				94110E6021D0150D00ADCC62 /* ProductTableViewCell.xib */,
 				94110E4A21D00DB100ADCC62 /* Main.storyboard */,
 				94110E4D21D00DB300ADCC62 /* Assets.xcassets */,
 				94110E4F21D00DB300ADCC62 /* LaunchScreen.storyboard */,
@@ -141,6 +147,7 @@
 			files = (
 				94110E5121D00DB300ADCC62 /* LaunchScreen.storyboard in Resources */,
 				94110E5A21D010C500ADCC62 /* FASHIONCollectionViewCell.xib in Resources */,
+				94110E6221D0150D00ADCC62 /* ProductTableViewCell.xib in Resources */,
 				94110E4E21D00DB300ADCC62 /* Assets.xcassets in Resources */,
 				94110E4C21D00DB100ADCC62 /* Main.storyboard in Resources */,
 			);
@@ -155,6 +162,7 @@
 			files = (
 				94110E4921D00DB100ADCC62 /* ViewController.swift in Sources */,
 				94110E5B21D010C500ADCC62 /* FASHIONCollectionViewCell.swift in Sources */,
+				94110E6121D0150D00ADCC62 /* ProductTableViewCell.swift in Sources */,
 				94110E4721D00DB100ADCC62 /* AppDelegate.swift in Sources */,
 				94110E5E21D010D500ADCC62 /* TableViewModel.swift in Sources */,
 			);

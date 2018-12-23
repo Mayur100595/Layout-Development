@@ -9,13 +9,15 @@
 import UIKit
 
 let cellcollectionviewIdentifier = "FASHIONCollectionViewCell"
-
+let cellTableViewIdentifierProduct = "ProductTableViewCell"
 class ViewController: UIViewController , UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     
     var marrFashion:NSMutableArray = []
+    var intSelectedCell:Int?
     
     @IBOutlet weak var view_statusBar:UIView?
     @IBOutlet weak var clv_Function:UICollectionView?
+    @IBOutlet weak var tbl_BrandCategory:UITableView?
     @IBOutlet weak var const_StatusBarHeight:NSLayoutConstraint?
     
     override func viewDidLoad() {
@@ -25,9 +27,12 @@ class ViewController: UIViewController , UICollectionViewDelegate, UICollectionV
         let statusbarHeight = UIApplication.shared.statusBarFrame.size.height
         const_StatusBarHeight?.constant = statusbarHeight
         
+        intSelectedCell = 0
         self.LayoutDataSetupMethod()
         
         clv_Function?.register(UINib.init(nibName: "FASHIONCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: cellcollectionviewIdentifier)
+        tbl_BrandCategory?.register(UINib.init(nibName: "ProductTableViewCell", bundle: nil), forCellReuseIdentifier: cellTableViewIdentifierProduct)
+
     }
     
     //MARK: - Layout Data Setup Method
@@ -80,7 +85,6 @@ class ViewController: UIViewController , UICollectionViewDelegate, UICollectionV
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
             return marrFashion.count
     }
     
@@ -98,7 +102,48 @@ class ViewController: UIViewController , UICollectionViewDelegate, UICollectionV
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-            return CGSize(width: 80, height: 80)
+        return CGSize(width: 80, height: 80)
+    }
+}
+
+extension ViewController:UITableViewDataSource, UITableViewDelegate{
+    
+    //MARK: - UITableview Delegate and Datasource method
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        
+        return 1;
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3;
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellTableViewIdentifierProduct) as! ProductTableViewCell
+        
+        if intSelectedCell == indexPath.row{
+            
+            cell.view_ProductDetail?.isHidden = false;
+            cell.img_dropdown?.image = UIImage.init(named: "down")
+        } else{
+            
+            cell.view_ProductDetail?.isHidden = true;
+            cell.img_dropdown?.image = UIImage.init(named: "up")
+        }
+        
+        cell.lbl_Name?.text = "India";
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        intSelectedCell = indexPath.row
+        tbl_BrandCategory?.reloadData()
+        tbl_BrandCategory?.scrollToRow(at: indexPath, at: .top, animated: true)
+        //tbl_BrandCategory?.reloadRows(at: [indexPath], with: .fade)
     }
 }
 
