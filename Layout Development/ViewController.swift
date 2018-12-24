@@ -133,6 +133,7 @@ class ViewController: UIViewController , UICollectionViewDelegate, UICollectionV
             return CGSize(width: 80, height: 80)
         }
         else{
+            clv_Brand?.layoutIfNeeded()
             return CGSize(width: (clv_Brand?.frame.size.width)!, height:  (clv_Brand?.frame.size.height)!)
         }
     }
@@ -165,7 +166,14 @@ extension ViewController:UITableViewDataSource, UITableViewDelegate{
             cell.img_dropdown?.image = UIImage.init(named: "up")
         }
         
-        cell.lbl_Name?.text = "India";
+        if indexPath.row == 0{
+            
+            cell.lbl_Name?.text = "Lips";
+        } else if indexPath.row == 1{
+            cell.lbl_Name?.text = "Face";
+        } else if indexPath.row == 2{
+            cell.lbl_Name?.text = "Nails";
+        }
         
         return cell
     }
